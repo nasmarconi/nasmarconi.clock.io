@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=VT323&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    font-family:"vt323";
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    z-index: 2;
+    margin-top: 1rem;
+}
+
+.clock{
+    position: relative;
+    /* background-color: lightgrey; */
+    background-image: url(/img/garden.jpg);
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid rgb(173, 230, 182);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.numbers div{
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 2px 2px rgba(10, 200, 255, 0.9);
+}
+
+.twelve{
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.three{
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.six{
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nine{
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrows{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    z-index: 4;
+}
+
+.arrows div{
+    background-color: rgba(255, 255, 0, .8);
+    width: 7px;
+    position: absolute;
+    height: 120px;
+    transform-origin: bottom center;
+    bottom: 50%;
+    z-index: 3;
+    border-radius: 50% 50% 0 0 ;
+    /* box-shadow: 2px 2px 5px rgba(8, 212, 8, 0.9); */
+}
+
+.arrows .hour{
+    height: 80px;
+    transform: rotate(30deg);
+    background-color: rgb(96, 235, 250, .8);
+}
+
+.arrows .second{
+    transform: rotate(250deg);
+    background-color: rgb(255, 255, 0, .5);
+}
